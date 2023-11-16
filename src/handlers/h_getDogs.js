@@ -8,14 +8,14 @@ const {api_key} = process.env;
 const URL = `https://api.thedogapi.com/v1/breeds?api_key=${api_key}`;
 
 const h_getDogs = async () => {
-    let {data} = await axios(URL);
+    let {data} = await axios(`https://api.thedogapi.com/v1/breeds?api_key=${api_key}`);
 
     if(Array.isArray(data)){
         const dogsApi = data.map((dog)=>{
             return dog = {...dog, 
-                weight: dog.weight.metric, 
-                height: dog.height.metric, 
-                image: dog.image.url,
+                weight: dog?.weight.metric, 
+                height: dog?.height.metric, 
+                image: dog?.image.url,
                 temperament: dog.temperament?.split(', ')
             }
         });

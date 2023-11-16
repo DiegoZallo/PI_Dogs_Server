@@ -7,9 +7,9 @@ const { deleteDog } = require('../controllers/deleteDog');
 
 const dogRouter = Router();
 
-dogRouter.post('/', postDog);
 dogRouter.get('/', getDogs);
 dogRouter.get('/:id', getDogDetail);
+dogRouter.post('/', postDog);
 dogRouter.delete('/:id', deleteDog);
 
 module.exports = dogRouter;
