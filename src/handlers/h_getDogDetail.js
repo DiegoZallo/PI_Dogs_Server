@@ -24,7 +24,7 @@ const h_getDogDetail = async (id) => {
         const dogsApi = {...data[0], 
             weight: data[0].weight.metric, 
             height: data[0].height.metric, 
-            // image: data[0].image.url,
+            image: data[0].image.url,
             temperament: data[0].temperament?.split(', ')
         }
     

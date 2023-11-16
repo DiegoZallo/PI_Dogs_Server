@@ -15,7 +15,7 @@ const h_getDogs = async () => {
             return dog = {...dog, 
                 weight: dog?.weight.metric, 
                 height: dog?.height.metric, 
-                // image: dog?.image.url,
+                image: dog?.image.url,
                 temperament: dog.temperament?.split(', ')
             }
         });
